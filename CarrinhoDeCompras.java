@@ -32,11 +32,23 @@ public class CarrinhoDeCompras {
         return uuid;
     }
 
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
     public List<Produto> getProdutos() {
         return produtos;
     }
 
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
     public BigDecimal getValorTotal() {
         return valorTotal;
+    }
+
+    public void setValorTotal(BigDecimal valorTotal) {
+        this.valorTotal = valorTotal;
     }
 }

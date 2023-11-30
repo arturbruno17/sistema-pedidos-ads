@@ -8,14 +8,17 @@ public class Pedido {
     private UUID uuid;
     private List<Produto> produtos = new ArrayList<>();
     private BigDecimal valorTotal;
+    private Status status;
+    private Cupom cupom;
 
     public Pedido() {
     }
 
-    public Pedido(UUID uuid, List<Produto> produtos, BigDecimal valorTotal) {
+    public Pedido(UUID uuid, List<Produto> produtos, BigDecimal valorTotal, Cupom cupom) {
         this.uuid = uuid;
         this.produtos = produtos;
         this.valorTotal = valorTotal;
+        this.cupom = cupom;
     }
 
     public UUID getUuid() {
@@ -40,5 +43,21 @@ public class Pedido {
 
     public void setValorTotal(BigDecimal valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Cupom getCupom() {
+        return cupom;
+    }
+
+    public void setCupom(Cupom cupom) {
+        this.cupom = cupom;
     }
 }

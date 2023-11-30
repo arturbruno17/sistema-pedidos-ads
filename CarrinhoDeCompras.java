@@ -24,8 +24,8 @@ public class CarrinhoDeCompras {
         valorTotal = BigDecimal.ZERO;
     }
 
-    public Pedido finalizarCompra() {
-        return new Pedido(UUID.randomUUID(), produtos, valorTotal);
+    public Pedido finalizarCompra(Cupom cupom) {
+        return new Pedido(UUID.randomUUID(), produtos, valorTotal, cupom);
     }
 
     public UUID getUuid() {
